@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="eS">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+    <title>Eliminar fila de tabla HTML con JavaScript</title>
+  </head>
+  <body> 
+    
+<div class="container mb-5">
+    <h1 class="text-center mt-5 mb-5">
+        Eliminar fila de tabla HTML con JavaScript
+    </h1>
+      <table class="table table-hover">
+        <thead>
+          <tr>
+            <th scope="col">#</th>
+            <th scope="col">Lenguaje</th>
+            <th scope="col">Like</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr id="registro_1" onclick="eliminarLista('1');">
+            <th scope="row">1</th>
+            <td>C</td>
+            <td>41</td>
+          </tr>
+          <tr id="registro_2" onclick="eliminarLista('2');">
+            <th scope="row">2</th>
+            <td>C++</td>
+            <td>54</td>
+          </tr>
+          <tr id="registro_3" onclick="eliminarLista('3');">
+            <th scope="row">3</th>
+            <td>Python</td>
+            <td>12</td>
+          </tr>
+          <tr id="registro_4" onclick="eliminarLista('4');">
+            <th scope="row">4</th>
+            <td>Node.js</td>
+            <td>11</td>
+          </tr>
+          <tr id="registro_5" onclick="eliminarLista('5');">
+            <th scope="row">5</th>
+            <td>PHP</td>
+            <td>14</td>
+          </tr>
+        </tbody>
+      </table>
+
+    <script>
+    function eliminarLista(idLista){
+        console.log('Id Registro: ' + idLista);
+        let tr = document.querySelector('#registro_'+idLista);
+        tr.remove();
+        console.log(`Registro id:${idLista} eliminado 😲`)
+    }
+    </script>
+  </body>
+</html>
